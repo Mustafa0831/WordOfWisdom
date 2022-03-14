@@ -33,12 +33,12 @@ $ make start/server # starts server container
 
 ``` shell
 $ make start/client # starts client container and opens its shell
-$ wow-client -addr go-wow-server:1111 # connects to the server, performs POW puzzle solving and receives a quote.
+$ client -addr go-server:1111 # connects to the server, performs POW puzzle solving and receives a quote.
 ```
 
 #### Arguments
 ```
-Usage of wow-client:
+Usage of client:
   -addr string
          (default "0.0.0.0:1111")
   -count uint
