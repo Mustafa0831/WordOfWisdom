@@ -47,7 +47,7 @@ stop/server:
 	docker stop go-server
 
 start/client:
-		# echo client -addr go-server:1024 -count 25000
+		# echo client -addr go-server:1111 -count 25000
 		docker run \
 		-it --rm \
 		--network go-network \
@@ -59,4 +59,4 @@ start/client-spam:
 		-it --rm \
 		--network go-network \
 		go-client:${CLIENT_IMAGE_VERSION} \
-		client -addr go-server:1024 -count 25000
+		client -addr go-server:1111 -count 25000
