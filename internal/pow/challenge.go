@@ -65,7 +65,6 @@ func (h *ChallengeHandler) closeConn(conn net.Conn) {
 }
 
 func (d *HoldLink) Run(conn net.Conn) (ok bool, err error) {
-	// TODO: set deadline according to difficulty
 	deadline := time.Now().Add(2 * time.Second)
 	if err := conn.SetDeadline(deadline); err != nil {
 		return false, fmt.Errorf("set deadline: %w", err)
